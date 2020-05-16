@@ -1,0 +1,45 @@
+.home-wave, .about-wave {
+  position: absolute;
+  top: -21rem;
+  height: 100vh;
+  right: -2rem;
+  z-index: 0;
+}
+.home-wave-shape {
+  fill: #bf3c1f;
+}
+.home-wave-shape, .home-wave-outline {
+  stroke: #bf3c1f;
+  stroke-miterlimit: 10;
+}
+.home-wave-outline {
+  fill: none;
+  stroke-width: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-height: 861px;
+  height: 100%;
+  width: 100%;
+}
+
+
+.about-wave {
+  top: 0;
+}
+.about-wave-shape {
+  fill: #BF3C1F;
+}
+.about-wave-shape, .about-wave-outline {
+  stroke: #bf3c1f;
+  stroke-miterlimit: 10;
+}
+.about-wave-outline {
+  fill: none;
+  stroke-width: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 1164px;
+  width: 100%;
+}

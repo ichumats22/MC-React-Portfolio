@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 100%;
+  background-color: #fff7e0;
+  overflow-x: hidden;
+}
+body {
+  overflow-y: hidden;
+}
+.container-fluid {
+  padding: 0;
+}
+
+#right-align-btn-col {
+  padding: 0 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ~ HOME ~ */
+#home .row .col-12 {
+  margin-left: 3rem;
+}
+
+/* ~ ABOUT ~ */ 
+#about {
+  margin-top: 45px;
+}
+#about .col-md-8 {
+  padding-left: 2rem;
+}
+#about .row .col-md-5 {
+  display: flex;
+  justify-content: center;
+}
+#headshot {
+  max-height: 100%;
+  height: auto;
+  max-width: 75%;
+  margin-bottom: 1rem;
+}
