@@ -19,9 +19,9 @@ export default class Sidenav extends Component {
     } else { 
       return ( 
         <div id='mySidenav' className='sidenav'>
-          <button className='closebtn' onClick={this.closeNav}>&times;</button>
-          <NavLink to="/">HOME</NavLink>
-          <NavLink to='about'> ABOUT </NavLink>
+          <button className='closebtn' onClick={this.closeNav}>X</button>
+          <NavLink to='/'>HOME</NavLink>
+          <NavLink to='/'> ABOUT </NavLink>
           <NavLink to='/resume'>RESUME</NavLink>
           <NavLink to='/portfolio'>PORTFOLIO</NavLink>
         </div>

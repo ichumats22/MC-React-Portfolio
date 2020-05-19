@@ -45,3 +45,12 @@ export function Block({children, id}) {
   )
 }
 
+
+export function SectionHeader({children}) {
+  return (
+    <h3 className='resume-section-header'>
+      {children}
+    </h3>
+  )
+}
+

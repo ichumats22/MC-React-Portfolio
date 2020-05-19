@@ -1,5 +1,5 @@
 .resume-row {
-  margin: 0 3rem 2rem 3rem;
+  margin: 1rem 2rem 1rem 3rem;
 }
 .resume-subrow {
   margin-bottom: 1rem;
@@ -19,24 +19,36 @@
 .resume-block {
   background: #BF3C1F;
   min-height: fit-content;
-  padding: 1.5rem;
   height: 100%;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 #resume-education-block {
-  height: 97%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+#resume-education-block .resume-subcol, #ashley-p-block .resume-subcol, #flooring-specialist-block .resume-subcol, #file-admin-block .resume-subcol {
+  margin-left: 1.5rem
+}
+#ashley-p-block .resume-subcol, #flooring-specialist-block .resume-subcol, #file-admin-block .resume-subcol {
+  width: inherit;
+  margin-right: 1.5rem
 }
 .resume-block p, .resume-skills-block p {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   margin-bottom: .5rem;
 }
-
-#resume-file-admin-block {
+#file-admin-block {
   margin-top: 1rem;
+}
+.resume-row .col-12 a {
+  float: right;
+}
+
+.date {
+  float: right;
 }

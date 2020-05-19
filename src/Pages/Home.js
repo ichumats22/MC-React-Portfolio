@@ -12,17 +12,16 @@ export default class Home extends Component {
     return (
       <div>
         <Section id='home'>
-          <Col size='12'>
-            <Wave.Home />
-            <Typography.HeaderOne>
+          <Wave.Home />
+          <Col size='8'>
+            <h1>
               Hi, 
               <br />
               I'm McKenna Craig 
-            </Typography.HeaderOne>
-            <Typography.Paragraph> 
+            </h1>
+            <p> 
               Caramels halvah icing tiramisu chocolate cake soufflé cake. Chocolate bar jelly cupcake ice cream macaroon icing. Toffee lollipop powder chocolate cake danish jujubes.
-            </Typography.Paragraph> 
-
+            </p> 
             <Button id='home-btn' href='index.html#about'>LEARN MORE</Button>
           </Col>
         </Section>
@@ -31,7 +30,7 @@ export default class Home extends Component {
           <Wave.About />
 
           <Col size='md-5'>
-            <img src='../Assets/images/headshot.jpg' id='headshot' alt='McKenna Craig Headshot' />
+            <img src='../assets/images/headshot.jpg' id='headshot' alt='McKenna Craig Headshot' />
           </Col>
           <Col size='md-7'>
             <h1>I specialize in</h1>

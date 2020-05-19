@@ -5,7 +5,7 @@ import Home from './Pages/Home'
 import Resume from './Pages/Resume'
 import Portfolio from './Pages/Portfolio'
 
-import './Assets/css/style.css'
+import './assets/css/style.css'
  
 class App extends Component {
   render() {
@@ -14,10 +14,9 @@ class App extends Component {
         <div className='container-fluid'>
           <Sidenav> </Sidenav>
           <Switch>
-            <Route exact path="/" component={Home}/>
-            
-            <Route exact path="/resume" component={Resume}/>
-            <Route exact path="/portfolio" component={Portfolio}/>
+            <Route exact path='/' component={Home}/>
+            <Route exact path='/resume' component={Resume}/>
+            <Route exact path='/portfolio' component={Portfolio}/>
           </Switch>
         </div>
       </HashRouter>  
