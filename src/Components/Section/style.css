@@ -1,15 +1,10 @@
 section {
   min-height: 100vh;
-  padding: 90px 0;
+  height: fit-content;
   position: relative;
+  background-color: #fff7e0;
 }
 
-
-.content-row {
-  min-height: fit-content;
-  height: -webkit-fill-available;
-  margin: 0 0 45px 0;
-}
 
 @media screen and (max-width: 450px) {
   /* ~ GENERAL ~*/

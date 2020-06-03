@@ -1,0 +1,26 @@
+div.text-white.card {
+  border: none;
+}
+
+div.card-img-overlay {
+  padding: 0rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+img.card-img {
+  border-radius: initial;
+}
+
+.portfolio-card-title { 
+  background: #BF3C1F;
+  height: 3rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  text-align: right;
+  font: 1.5rem;
+}

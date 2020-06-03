@@ -1,0 +1,13 @@
+#portfolio .col {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#portfolio-content-row {
+  height: 100vh;
+  margin-bottom: 5rem;
+}
+#portfolio-content-row .col {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}

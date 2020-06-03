@@ -21,9 +21,11 @@ export default class Sidenav extends Component {
         <div id='mySidenav' className='sidenav'>
           <button className='closebtn' onClick={this.closeNav}>X</button>
           <NavLink to='/'>HOME</NavLink>
-          <NavLink to='/'> ABOUT </NavLink>
+          <a href='/#about'> ABOUT </a>
+          <a href='/#skills'> SKILLS </a>
           <NavLink to='/resume'>RESUME</NavLink>
           <NavLink to='/portfolio'>PORTFOLIO</NavLink>
+          <a href='/#contact'> CONTACT </a>
         </div>
       )
     }

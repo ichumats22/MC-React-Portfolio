@@ -1,88 +1,93 @@
 import React, { Component } from 'react'
-import { Row, Col } from '../Components/Grid'
-import Section from '../Components/Section'
-import * as Typography from '../Components/Typography'
-import * as Wave from '../Components/Wave'
-import Button from '../Components/Button'
-import * as Skills from '../Components/Skills'
-import * as Contact from '../Components/Contact'
+import './Home.css'
+import { Row, Col } from 'react-bootstrap'
+import Section from '../components/Section'
+import SectionHeader from '../components/Section-Header'
+import Button from '../components/Button'
+import SkillBlock from '../components/Skill-Block'
  
 export default class Home extends Component {
   render() {
     return (
       <div>
         <Section id='home'>
-          <Wave.Home />
-          <Col size='8'>
-            <h1>
-              Hi, 
-              <br />
-              I'm McKenna Craig 
-            </h1>
-            <p> 
-              Caramels halvah icing tiramisu chocolate cake soufflé cake. Chocolate bar jelly cupcake ice cream macaroon icing. Toffee lollipop powder chocolate cake danish jujubes.
-            </p> 
-            <Button id='home-btn' href='index.html#about'>LEARN MORE</Button>
-          </Col>
+          <Row>
+            <Col lg={8} id='home-text-col'>
+              <h1>
+                Hi, 
+                <br />
+                I'm McKenna Craig 
+              </h1>
+              <p> 
+                I was born and raised in Phoenix, AZ and graduated from Northern Arizona University in May 2018 with a Bachelor of Science in Interior Design (CIDA).
+              </p> 
+              <Button id='home-btn' href='/index.html#about' text='LEARN MORE' />
+            </Col>
+          </Row>
         </Section>
 
         <Section id='about'>
-          <Wave.About />
-
-          <Col size='md-5'>
-            <img src='../assets/images/headshot.jpg' id='headshot' alt='McKenna Craig Headshot' />
-          </Col>
-          <Col size='md-7'>
-            <h1>I specialize in</h1>
-            <h1>Interior Design</h1>
-            <p>Caramels halvah icing tiramisu chocolate cake soufflé cake. Chocolate bar jelly cupcake ice cream macaroon icing. Toffee lollipop powder chocolate cake danish jujubes. </p>
-            <a className='btn' id='see-my-work-btn' href='./portfolio.html'>SEE MY WORK</a>
-          </Col>
+          <Row>
+            <Col md={5} id='headshot-col'>
+              <img src='../assets/images/headshot.png' id='headshot' alt='McKenna Craig Headshot' />
+            </Col>
+            <Col md={5} id='about-text-col'>
+              <h1>I specialize in Interior Design</h1>
+             
+              <p id='about-text'>I love mixing unexpected materials and textures, and have a passion for universal and sustainable design. </p>
+              <Button id='see-my-work-btn' href='./portfolio.html' text='SEE MY WORK'/>
+            </Col>
+          </Row>
         </Section>
 
         <Section id='skills'>
-
-          <Col size='12'>
-            <Row>
-              <Typography.SectionHeader>SKILLS</Typography.SectionHeader>
-            </Row>
-
-            <Skills.BlockRow>
-              <Col size='md-3'>
-                <Skills.Block 
-                  aos='fade-left' 
-                  title='Skill 1' 
-                  text='Caramels halvah icing tiramisu chocolate cake soufflé cake. Chocolate bar jelly cupcake ice cream macaroon icing.' 
-                />
-              </Col>
-              <Col size='md-3'>
-                <Skills.Block 
-                  aos='fade-up' 
-                  title='Skill 2' 
-                  text='Caramels halvah icing tiramisu chocolate cake soufflé cake. Chocolate bar jelly cupcake ice cream macaroon icing.' 
-                />
-              </Col>
-              <Col size='md-3'>
-                <Skills.Block 
-                  aos='fade-right' 
-                  title='Skill 3' 
-                  text='Caramels halvah icing tiramisu chocolate cake soufflé cake. Chocolate bar jelly cupcake ice cream macaroon icing.' 
-                />
-              </Col>
-            </Skills.BlockRow>
-            <Skills.BtnRow />
-          </Col>
+          <Row>
+            <Col>
+              <SectionHeader>SKILLS</SectionHeader>
+            </Col>
+          </Row>
+          <Row className='skills-block-row'> 
+            <Col md={3}>
+              <SkillBlock 
+                aos='fade-left' 
+                title='Revit' 
+                text='Intermediate knowledge of Revit software.' 
+              />
+            </Col>
+            <Col md={3}>
+              <SkillBlock 
+                aos='fade-up'
+                title='AutoCad' 
+                text='Highly proficient in AutoDesk AutoCad with 4 years of experience.' 
+              />
+            </Col>
+            <Col md={3}>
+              <SkillBlock 
+                aos='fade-right' 
+                title='Rendering' 
+                text='Highly proficient at hand rendering, Sketch Up, and Chief Architect' 
+              />
+            </Col>
+          </Row>
+          <Row id='skills-to-resume-btn-row'>
+            <Col id='right-align-btn-col'>
+              <Button id='skills-to-resume-btn' href='/resume' text='SEE MY RESUME' />
+            </Col>
+          </Row>
+          
         </Section>
 
         <Section id='contact'>
-          <Col size='12'>
-            <Row>
-              <Typography.SectionHeader>CONTACT</Typography.SectionHeader>
-            </Row>
-            <Contact.Row>
-              <Contact.SVG />
-            </Contact.Row>
-          </Col>
+          <Row>
+            <Col>
+              <SectionHeader>CONTACT</SectionHeader>
+            </Col>
+          </Row>
+          <Row>
+            <Col id='contact-info-col'>
+              
+            </Col>
+          </Row>
         </Section>
       </div>
     )

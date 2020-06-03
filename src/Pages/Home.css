@@ -1,0 +1,70 @@
+/* ~ HOME ~ */
+  #home {
+    background-image: url(../assets/images/home-wave.svg);
+    background-position: 65rem -7rem;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #home-text-col {
+    margin-left: 3rem;
+  }
+
+/* ~ ABOUT ~ */ 
+  #about {
+    background-image: url(../assets/images/about-wave.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #headshot-col {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #headshot {
+    margin-bottom: 1rem;
+    height: auto; 
+    width: 75%;
+  }
+  #about-text-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2rem;
+  }
+  #about-text-col h1 {
+    display: flex;
+    width: 20rem;
+  }
+  #see-my-work-btn {
+    display: flex;
+    align-self: flex-start;
+  }
+
+/* ~ SKILLS ~ */
+  #skills {
+    margin-top: 15rem;
+  }
+  .skills-block-row {
+    justify-content: center;
+    margin: 0 4rem 0 4rem;
+  }
+  #skills-to-resume-btn-row {
+    margin: 2rem 0 0 0;
+  }
+
+/* ~ CONTACT ~ */
+  #contact-info-col {
+    height: 85vh;
+    background-image: url(../assets/images/contact.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+ 

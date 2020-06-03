@@ -1,6 +1,15 @@
 import React from 'react'
 import './style.css'
 
+
+export function SectionHeader({children}) {
+  return (
+    <h3 className='resume-section-header'>
+      {children}
+    </h3>
+  )
+}
+
 export function Row({children}) {
   return (
     <div className='row resume-row'>
@@ -45,12 +54,4 @@ export function Block({children, id}) {
   )
 }
 
-
-export function SectionHeader({children}) {
-  return (
-    <h3 className='resume-section-header'>
-      {children}
-    </h3>
-  )
-}
 

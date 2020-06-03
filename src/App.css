@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+
+}
+
+div.container-fluid {
+  background-color: #fff7e0;
+  min-height: 100vh;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+div.row {
+  margin-left: 0;
+  margin-right: 0px
+}
+
+#right-align-btn-col {
+  padding: 0 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ~ TEXT ~ */
+h1, h2, h3, h2, h5, h6{
+  font-family: 'Raleway', sans-serif;
+}
+
+h1{
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+h5{
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+}
+
+/* ~ MEDIA QUERIES ~ */
+  @media screen and (max-width: 991px) {
+    /* ~ GENERAL ~ */
+    h1 {
+      font-size: 2.5rem
+    }
+    p {
+      font-size: 1.3rem
+    }
+
+    /* ~ ABOUT ~ */
+    #headshot-col {
+      justify-content: center;
+    }
+    #headshot {
+      height: 50vh;
+      width: auto;
+    }
+    #about-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #about-col p {
+      max-width: 50vw;
+      text-align: center;
+    }
+    /* ~ RESUME ~ */
+    .date {
+      float: left;
+    }
+  } 
+  @media screen and (max-width: 767px) {
+    /* ~ GENERAL ~ */
+    .section-header {
+      margin: 2rem 0 0 1rem;
+    }
+    /* ~ HOME ~ */ 
+    #home-col {
+      margin-left: 2rem;
+    }
+    /* ~ ABOUT ~ */
+    #about-text-col h1 {
+      width: fit-content;
+    }
+    #see-my-work-btn {
+      align-self: center;
+    }
+    /* ~ RESUME ~ */
+    .row.resume-row {
+      margin: .5rem;
+    }
+    .resume-block {
+      margin-top: 1rem;
+      height: fit-content;
+    }
+    .resume-section-header {
+      margin: 1rem 0 0 1rem;
+    }
+    #my-skills, #my-experience {
+      margin: 1rem;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    /* ~ WAVE ~ */
+    .home-wave, .about-wave {
+      right: -8rem;
+    }
+    /* ~ SKILLS ~ */
+    #skills-block-row {
+      margin: 0;
+      flex-direction: column;
+    }
+    .skills-block {
+      height: 15rem;
+      margin-bottom: 2rem;
+    }
+    #skills-to-resume-btn-row {
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    /* ~ WAVE ~ */
+    .home-wave, .about-wave {
+      right: -10rem;
+    }
+    /* ~ ABOUT ~ */
+    #about-col p {
+      max-width: 75vw;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    /* ~ HOME ~*/
+    #home-col {
+      margin-left: 1rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .btn {
+      font-size: .85rem;
+    }
+  } 
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    /* ~ SIDENAV ~*/
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+     /* ~ GENERAL ~*/
+    section {
+      margin-bottom: 90px;
+    }
+    #right-align-btn-col {
+      justify-content: center;
+    }
+    
+  }
+
+

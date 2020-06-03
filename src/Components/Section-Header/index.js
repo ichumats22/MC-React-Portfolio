@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 
-export function SectionHeader({children}) {
+export default function SectionHeader({children}) {
   return (
     <h2 className='section-header'>
       {children}

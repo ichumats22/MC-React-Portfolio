@@ -1,0 +1,42 @@
+#resume {
+  padding-bottom: 1rem;
+}
+
+#resume .section-header {
+  height: 3rem;
+  align-items: flex-end;
+}
+#resume h5, #resume h6{
+  font-weight: bold;
+  min-width: fit-content;
+}
+#resume p {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+.resume-block li, .resume-skills-block li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+#resume-right-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 1rem;
+}
+#resume-education-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#resume-download-btn {
+  float: right;
+}
+#file-admin-block {
+  margin-top: 1rem;
+}
+.date {
+  float: right;
+  margin-right: 1rem;
+}
