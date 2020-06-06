@@ -1,0 +1,20 @@
+
+#project-content-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.section 
+
+
+
+#ofs .text-white.project-card.card {
+  max-width: 33%;
+}
+
+
+#rest .text-white.project-card.card {
+  max-width: 20%;
+}

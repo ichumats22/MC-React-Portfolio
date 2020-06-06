@@ -1,0 +1,9 @@
+.text-white.project-card.card {
+  max-width: 25%;
+  margin: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: none;
+}
+

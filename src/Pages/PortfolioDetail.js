@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, CardColumns } from 'react-bootstrap'
 
 import Section from '../components/Section'
 import SectionHeader from '../components/Section-Header'
-import Lightbox from '../components/Lightbox'
+import ProjectCard from '../components/Project-Card'
+
+import './PortfolioDetail.css'
 
 const adot = [
 
@@ -29,7 +31,7 @@ const adot = [
   }, 
   {
     title: 'Adjacency Matrix',
-    link: '../assets/content/adot/cover-page.png'
+    link: '../assets/content/adot/adjacency-matrix.png'
   },
   {
     title: 'Moodboard',
@@ -216,30 +218,6 @@ const rest = [
 
 const helf = [
   { 
-    title: '', 
-    link: '../assets/content/helf/a.png' 
-  },
-  { 
-    title: '', 
-    link: '../assets/content/helf/b.png' 
-  },
-  { 
-    title: '', 
-    link: '../assets/content/helf/c.png' 
-  },
-  { 
-    title: '', 
-    link: '../assets/content/helf/d.png' 
-  },
-  { 
-    title: '', 
-    link: '../assets/content/helf/e.png' 
-  },
-  { 
-    title: '', 
-    link: '../assets/content/helf/f.png' 
-  },
-  { 
     title: 'Cover Page' ,
     link: '../assets/content/helf/cover-page.png' 
   },
@@ -294,6 +272,30 @@ const helf = [
   { 
     title: 'Residence Materials Board',
     link: '../assets/content/helf/residence-materials.png' 
+  },
+  { 
+    title: '', 
+    link: '../assets/content/helf/a.png' 
+  },
+  { 
+    title: '', 
+    link: '../assets/content/helf/b.png' 
+  },
+  { 
+    title: '', 
+    link: '../assets/content/helf/c.png' 
+  },
+  { 
+    title: '', 
+    link: '../assets/content/helf/d.png' 
+  },
+  { 
+    title: '', 
+    link: '../assets/content/helf/e.png' 
+  },
+  { 
+    title: '', 
+    link: '../assets/content/helf/f.png' 
   }
 ]
 
@@ -462,19 +464,15 @@ export default class PortfolioDetail extends Component {
 
   render() {
     return (
-      <Section id={this.state.title}>
+      <Section id={this.state.id}>
         <Row>
           <Col>
             <SectionHeader>{this.state.title}</SectionHeader>
           </Col>
         </Row>
 
-        <Row>
-          <Col>
-            <Lightbox sources={this.state.content}>
-
-            </Lightbox>        
-          </Col>
+        <Row id='project-content-row'>
+          {this.state.content.map(src => <ProjectCard src= {src.link} title={src.title}></ProjectCard>)}
         </Row>
       </Section>
     )

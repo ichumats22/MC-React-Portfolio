@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Card from 'react-bootstrap/Card'
-//import './style.css'
+import './style.css'
 
 export default class ProjectCard extends Component {
   state = {
@@ -18,7 +18,7 @@ export default class ProjectCard extends Component {
 
   render() {
     return(
-      <Card className='text-white'>
+      <Card className='text-white project-card'>
         <Card.Img src={this.state.src} alt={this.state.title} />
       </Card>
     )
