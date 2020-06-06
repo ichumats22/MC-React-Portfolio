@@ -4,6 +4,7 @@ import Sidenav from './components/Sidenav'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
 import Portfolio from './pages/Portfolio'
+import PortfolioDetail from './pages/PortfolioDetail'
 import './App.css'
 
 
@@ -18,6 +19,7 @@ class App extends Component {
             <Route exact path='/' component={Home}/>
             <Route exact path='/resume' component={Resume}/>
             <Route exact path='/portfolio' component={Portfolio}/>
+            <Route exact path='/portfolio/:id' component={PortfolioDetail}/>
           </Switch>
         </div>
       </HashRouter>  
