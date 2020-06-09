@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import { BrowserRouter as HashRouter, Route, Switch} from 'react-router-dom';
+import './App.css'
+
 import Sidenav from './components/Sidenav'
 import Home from './pages/Home'
 import Resume from './pages/Resume'
 import Portfolio from './pages/Portfolio'
 import PortfolioDetail from './pages/PortfolioDetail'
-import './App.css'
 
 
  
-class App extends Component {
-  render() {
+function App() {
+
     return (
       <HashRouter>
         <div className='container-fluid'>
@@ -24,7 +25,7 @@ class App extends Component {
         </div>
       </HashRouter>  
     )
-  }
+
 }
  
 export default App;

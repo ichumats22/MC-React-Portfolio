@@ -1,84 +1,105 @@
 import React, { Component } from 'react'
-import { Row, Col, CardColumns } from 'react-bootstrap'
+
+import { Row, Col, Modal } from 'react-bootstrap'
 
 import Section from '../components/Section'
 import SectionHeader from '../components/Section-Header'
 import ProjectCard from '../components/Project-Card'
+import Button from '../components/Button'
+
 
 import './PortfolioDetail.css'
 
 const adot = [
 
   {
+    key: 1,
     title: 'Project Board',
     link: '../assets/content/adot/project-board.png'
   },
   {
+    key: 2,
     title: 'Program - Facility Relocation Study',
     link: '../assets/content/adot/program-facility-relocation-study.png'
   },
   {
+    key: 3,
     title: 'Program - Problem/Concept', 
     link: '../assets/content/adot/program-problem-concept.png'
   },
   {
+    key: 4,
     title: 'Program - Requirements',
     link:  '../assets/content/adot/program-requirements.png'
   },
   {
+    key: 5,
     title: 'Criteria Matrix',
     link: '../assets/content/adot/criteria-matrix.png'
   }, 
   {
+    key: 6,
     title: 'Adjacency Matrix',
     link: '../assets/content/adot/adjacency-matrix.png'
   },
   {
+    key: 7,
     title: 'Moodboard',
     link: '../assets/content/adot/moodboard.png'
   },
   {
+    key: 8,
     title: 'Cover Page',
     link: '../assets/content/adot/cover-page.png'
   },
   {
+    key: 9,
     title: 'Site & Base Plan',
     link:  '../assets/content/adot/site-base.png'
   },
   {
+    key: 10,
     title: 'Dimension & Furniture/ Finish Plan',
     link: '../assets/content/adot/dimension-furniture-finish.png'
   },
   {
+    key: 11,
     title: 'Power/ Lighting & Reflected Cealing Plan',
     link: '../assets/content/adot/power-lighting-reflected-cealing.png'
   },
   {
+    key: 12,
     title: 'Perspective - ADOT Entry',
     link: '../assets/content/adot/perspective-adot-entry.png'
   },
   {
+    key: 13,
     title: 'Perspective - MVD Entry',
     link: '../assets/content/adot/perspective-mvd-entry.png'
   },
   {
+    key: 14,
     title: 'Perspective - Reception',
     link: '../assets/content/adot/perspective-reception.png',
 
   },
   {
+    key: 15,
     title: 'Perspective - Waiting Area',
     link: '../assets/content/adot/perspective-waiting.png'
   },
   {
+    key: 16,
     title: 'Perspective - Waiting Area from Reception',
     link: '../assets/content/adot/perspective-waiting-reception.png'
   },
   {
+    key: 17,
     title: 'Perspective - Service Counter',
     link: '../assets/content/adot/perspective-serivce-counters.png'
   },
   {
+    key: 18,
     title: 'Materials/ Finish Board',
     link: '../assets/content/adot/materials-finish.png'
   }
@@ -384,20 +405,56 @@ const moodboards = [
   }
 ]
 
+function ModalContent(props) {
+  return (
+    <Modal
+      {...props}
+      size="xl"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Body>
+        <Row>
+          <Col id='modal-btn-col' xs={1}>
+            <Button id='modal-btn' text='<' />
+          </Col>
+          <Col xs={10}>
+          
+              <img className='modal-photo' src={props.src.link ? props.src.link : ''} alt={props.src.title ? props.src.title : ''}></img>
+            
+          </Col>
+
+          <Col id='modal-btn-col' xs={1}>
+            <Button id='modal-btn' text='>' />
+          </Col>
+        </Row>
+      </Modal.Body>
+    </Modal>
+  )
+}
+
 export default class PortfolioDetail extends Component {
-  state = {
-    id: this.props.match.params.id,
-    title: '',
-    content: [],
-    toggler: false
+ 
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: this.props.match.params.id, 
+      title: '',
+      content: [],
+      modalShow: false,
+      activePhoto: ''
+    };
+
+    // This binding is necessary to make `this` work in the callback
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   componentDidMount() {
     this.loadContent()
   } 
-  
+
   loadContent = () => {
-    console.log('loadContent reached')
     switch(this.state.id) {
       case 'adot':
         this.setState({ 
@@ -461,6 +518,20 @@ export default class PortfolioDetail extends Component {
     }
   }
 
+  openModal = (e) => {
+    console.log(e)
+    this.setState({
+      modalShow: true,
+      activePhoto: e
+    })
+  }
+
+  closeModal = (e) => {
+    this.setState({
+      modalShow: false,
+      activePhoto: {}
+    })
+  }
 
   render() {
     return (
@@ -472,7 +543,9 @@ export default class PortfolioDetail extends Component {
         </Row>
 
         <Row id='project-content-row'>
-          {this.state.content.map(src => <ProjectCard src= {src.link} title={src.title}></ProjectCard>)}
+          {this.state.content.map(src => <ProjectCard id={`${this.state.id}-${src.key}`} key={src.key} src={src.link} title={src.title} onClick={(e) => this.openModal(src, e)} />)}
+
+          <ModalContent src={this.state.activePhoto} show={this.state.modalShow} onHide={() => this.closeModal()} />
         </Row>
       </Section>
     )

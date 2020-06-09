@@ -34,7 +34,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "fslightbox-react": "^1.4.9"
-  }
+  "devDependencies": {}
 }

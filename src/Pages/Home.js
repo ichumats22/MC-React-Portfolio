@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './Home.css'
 import { Row, Col } from 'react-bootstrap'
+import { ReactComponent as HomeWave } from '../assets/images/home-wave.svg'
 import Section from '../components/Section'
 import SectionHeader from '../components/Section-Header'
 import Button from '../components/Button'

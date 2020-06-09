@@ -7,12 +7,13 @@ export default class Sidenav extends Component {
     showMenu: false
   }
 
+
   display = () => {
     if (!this.state.showMenu) {
       return (
         <div className='row' id='sidenav-row'>
           <div className='col' id='sidenav-btn'> 
-            <span onClick={this.openNav}><i className='fas fa-bars'></i></span>
+            <span onClick={() => this.openNav()}><i className='fas fa-bars'></i></span>
           </div>
         </div>
       )
@@ -42,6 +43,7 @@ export default class Sidenav extends Component {
   render() {
     return (
       this.display()
+     
     )
   }
 }
