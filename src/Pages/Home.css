@@ -1,6 +1,6 @@
 /* ~ HOME ~ */
   #home {
-    background-image: url(../assets/images/home-wave.svg);
+    background: url(../assets/images/home-wave.svg);
     background-position: 65rem -7rem;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -60,11 +60,15 @@
   }
 
 /* ~ CONTACT ~ */
-  #contact-info-col {
-    height: 85vh;
-    background-image: url(../assets/images/contact.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  #contact {
+    margin-bottom: 0;
   }
- 
+  #contact-info-col {
+    display: flex;
+    justify-content: center;
+  }
+  #contact-info-col svg {
+    height: 85vh;
+  }
+  
+

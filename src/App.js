@@ -7,11 +7,11 @@ import Home from './pages/Home'
 import Resume from './pages/Resume'
 import Portfolio from './pages/Portfolio'
 import PortfolioDetail from './pages/PortfolioDetail'
+import './assets/css/mediaQueries.css'
 
 
  
 function App() {
-
     return (
       <HashRouter>
         <div className='container-fluid'>
@@ -25,7 +25,6 @@ function App() {
         </div>
       </HashRouter>  
     )
-
 }
  
 export default App;

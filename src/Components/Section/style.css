@@ -5,10 +5,3 @@ section {
   background-color: #fff7e0;
 }
 
-
-@media screen and (max-width: 450px) {
-  /* ~ GENERAL ~*/
-  section {
-    margin-bottom: 90px;
-  }
-}

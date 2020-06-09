@@ -5,3 +5,11 @@ a.btn {
   text-decoration: none;
   padding: 1rem 2rem 1rem 2rem;
 }
+
+#right-align-btn-col {
+  padding: 0 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+

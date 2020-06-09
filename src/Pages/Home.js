@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Home.css'
 import { Row, Col } from 'react-bootstrap'
-import { ReactComponent as HomeWave } from '../assets/images/home-wave.svg'
+import { ReactComponent as ContactSVG } from '../assets/images/contact.svg'
 import Section from '../components/Section'
 import SectionHeader from '../components/Section-Header'
 import Button from '../components/Button'
@@ -13,7 +13,7 @@ export default class Home extends Component {
       <div>
         <Section id='home'>
           <Row>
-            <Col lg={8} id='home-text-col'>
+            <Col lg={5} id='home-text-col'>
               <h1>
                 Hi, 
                 <br />
@@ -86,7 +86,7 @@ export default class Home extends Component {
           </Row>
           <Row>
             <Col id='contact-info-col'>
-              
+              <ContactSVG />
             </Col>
           </Row>
         </Section>

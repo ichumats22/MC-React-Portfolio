@@ -1,0 +1,163 @@
+/* ~ MEDIA QUERIES ~ */
+@media screen and (max-width: 991px) {
+  /* ~ GENERAL ~ */
+  h1 {
+    font-size: 2.5rem
+  }
+  p {
+    font-size: 1.3rem
+  }
+
+  /* ~ ABOUT ~ */
+  #headshot-col {
+    justify-content: center;
+  }
+  #headshot {
+    height: 50vh;
+    width: auto;
+  }
+  #about-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-col p {
+    max-width: 50vw;
+    text-align: center;
+  }
+  /* ~ RESUME ~ */
+  .date {
+    float: left;
+  }
+} 
+@media screen and (max-width: 767px) {
+  /* ~ GENERAL ~ */
+  .section-header {
+    margin: 2rem 0 0 1rem;
+  }
+  /* ~ HOME ~ */ 
+  #home-col {
+    margin-left: 2rem;
+  }
+  /* ~ ABOUT ~ */
+  #about-text-col h1 {
+    width: fit-content;
+  }
+  #see-my-work-btn {
+    align-self: center;
+  }
+  /* ~ RESUME ~ */
+  .row.resume-row {
+    margin: .5rem;
+  }
+  .resume-block {
+    margin-top: 1rem;
+    height: fit-content;
+  }
+  .resume-section-header {
+    margin: 1rem 0 0 1rem;
+  }
+  #my-skills, #my-experience {
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* ~ WAVE ~ */
+  .home-wave, .about-wave {
+    right: -8rem;
+  }
+  /* ~ SKILLS ~ */
+  #skills-block-row {
+    margin: 0;
+    flex-direction: column;
+  }
+  .skills-block {
+    height: 15rem;
+    margin-bottom: 2rem;
+  }
+  #skills-to-resume-btn-row {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  /* ~ WAVE ~ */
+  .home-wave, .about-wave {
+    right: -10rem;
+  }
+  /* ~ ABOUT ~ */
+  #about-col p {
+    max-width: 75vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  /* ~ HOME ~*/
+  #home-col {
+    margin-left: 1rem;
+  }
+  /* ~ CONTACT ~ */
+  #orange {
+    transform: scale(1.2) translate(-29% , 15%);
+  }
+  #orange text {
+    transform: translate(-5%, 2%);
+  }
+  #pink {
+    transform: scale(1.2) translate(-3%, -30%);
+  }
+  #white {
+    transform: scale(1.2) translate(14%, -25%)
+  }
+  #white text {
+    transform: translateY(2%)
+  }
+
+
+}
+@media screen and (max-width: 480px) {
+  .btn {
+    font-size: .85rem;
+  }
+} 
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  /* ~ SIDENAV ~*/
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+   /* ~ GENERAL ~*/
+  section {
+    margin-bottom: 90px;
+  }
+  #right-align-btn-col {
+    justify-content: center;
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+  /* ~ CONTACT ~ */
+  #orange {
+    transform: scale(1.5) translate(-35% , 15%);
+  }
+  #orange text {
+    transform: translateX(-5%);
+  }
+  #pink {
+    transform: scale(1.5) translate(-9%, -50%);
+  }
+  #white {
+    transform: scale(1.5) translate(8%, -38%)
+  }
+  #white text {
+    transform: translateY(-1%)
+  }
+}
+
+
