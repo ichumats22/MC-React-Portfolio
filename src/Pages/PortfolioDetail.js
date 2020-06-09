@@ -533,6 +533,7 @@ export default class PortfolioDetail extends Component {
     })
   }
 
+
   render() {
     return (
       <Section id={this.state.id}>
