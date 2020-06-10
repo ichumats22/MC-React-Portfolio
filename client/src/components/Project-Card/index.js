@@ -24,7 +24,7 @@ export default class ProjectCard extends Component {
 
   render() {
     return(
-      <Card className={'text-white project-card'} onClick={this.state.onClick}>
+      <Card className={'text-white project-card'} id={this.state.id} onClick={this.state.onClick}>
         <Card.Img src={this.state.src} alt={this.state.title} onClick={this.props.openModal} />
       </Card>
     )

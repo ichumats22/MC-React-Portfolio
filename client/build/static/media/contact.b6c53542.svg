@@ -8,19 +8,19 @@
       }
     </style>
   </defs>
-  <g>
+  <g id='orange'>
     <circle cx='70%' cy='60%' r='150' fill='#BF3C1F' />
     <text x='54%' y='62%' fill='black'>
       mckennacraig19@gmail.com
     </text>
   </g> 
-  <g>
+  <g id='white'>
     <circle cx='27%' cy='60%' r='125' fill='#FFFFFF' />
     <text x='17%' y='62%' fill='black' >
       480-721-5390
     </text>
   </g>
-  <g>
+  <g id='pink'>
     <circle cx='45%' cy='25%' r='100' fill='#F9CEC7'/>
     <text x='37%' y='27%' fill='black'>
       Phoenix, AZ
