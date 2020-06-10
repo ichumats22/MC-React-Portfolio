@@ -603,12 +603,9 @@ export default class PortfolioDetail extends Component {
             <Col id='modal-btn-col' xs={1}>
               <Button id='modal-btn' text='<' onClick={(e) => this.updateModal('left', e)} />
             </Col>
-            <Col xs={10}>
-            
-                <img className='modal-photo' src={this.state.activePhoto.link ? this.state.activePhoto.link : ''} alt={this.state.activePhoto.title ? this.state.activePhoto.title : ''}></img>
-              
+            <Col id='modal-img-col' xs={10}>
+              <img className='modal-photo' src={this.state.activePhoto.link ? this.state.activePhoto.link : ''} alt={this.state.activePhoto.title ? this.state.activePhoto.title : ''}></img>
             </Col>
-  
             <Col id='modal-btn-col' xs={1}>
               <Button id='modal-btn' text='>' onClick={(e) => this.updateModal('right', e)}/>
             </Col>
@@ -634,9 +631,16 @@ export default class PortfolioDetail extends Component {
 
   updateModal = (e) => {
     let command = e
+    let maxIndex = this.state.content.length -1
     let activeIndex = this.state.activePhoto.id - 1
-    let newIndex 
-    command === 'right' ? newIndex = activeIndex + 1 : newIndex = activeIndex - 1
+    let newIndex
+    if (activeIndex < maxIndex && activeIndex !== 0) {
+      command === 'right' ? newIndex = activeIndex + 1 : newIndex = activeIndex - 1
+    }  else if (activeIndex === 0) {
+      command === 'right' ? newIndex = activeIndex + 1 : newIndex = maxIndex
+    } else if (activeIndex === maxIndex) {
+      command === 'right' ? newIndex = 0 : newIndex = activeIndex -1
+    }
     this.setState({
       activePhoto: this.state.content[newIndex]
     })
