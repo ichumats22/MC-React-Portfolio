@@ -1,0 +1,13 @@
+#no-match {
+  height: 100vh
+}
+
+#no-match .row {
+  height: 70vh;
+  align-items: center;
+}
+
+#no-match .row .col {
+  justify-content: center;
+  align-items: center;
+}

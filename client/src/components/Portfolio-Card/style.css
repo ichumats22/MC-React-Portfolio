@@ -1,5 +1,6 @@
 div.text-white.card {
   border: none;
+  height: 100%;
 }
 
 div.card-img-overlay {
