@@ -1,32 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Image } from 'cloudinary-react'
 import Card from 'react-bootstrap/Card'
 import './style.css'
 
-
-export default class ProjectCard extends Component {
-  state = {
-    id: '',
-    src: '',
-    title: '',
-    active: false
-  }
-
-  componentDidMount() {
-    this.setState({ 
-      id: this.props.id,
-      src: this.props.src,
-      title: this.props.title,
-      onClick: this.props.onClick
-    })
-  }
+require('dotenv').config()
+let cloudName = process.env.REACT_APP_CLOUD_NAME
 
 
-
-  render() {
-    return(
-      <Card className={'text-white project-card'} id={this.state.id} onClick={this.state.onClick}>
-        <Card.Img src={this.state.src} alt={this.state.title} onClick={this.props.openModal} />
-      </Card>
-    )
-  }
+export default function ProjectCard(props) {
+  return(
+    <Card className={'text-white project-card'} id={props.id} onClick={props.onClick}>
+      <Image cloudName={cloudName} publicId={props.src} secure={true} responsive={true} />
+    </Card>
+  )
 } 

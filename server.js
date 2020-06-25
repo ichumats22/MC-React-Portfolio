@@ -9,7 +9,6 @@ app.use(express.json());
 // Serve up static assets (usually on heroku)
 app.use(express.static('client/build'));
 
-
 app.listen(PORT, function() {
   console.log(`🌎 ==> App running on port ${PORT}!`);
 });
