@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-
 import { Row, Col, Modal } from 'react-bootstrap'
-
+import {Image} from 'cloudinary-react'
 import Section from '../components/Section'
 import SectionHeader from '../components/Section-Header'
 import ProjectCard from '../components/Project-Card'
@@ -11,97 +10,96 @@ import Button from '../components/Button'
 import './PortfolioDetail.css'
 
 const adot = [
-
   {
     id: 1,
     title: 'Project Board',
-    link: '../assets/content/adot/project-board.png'
+    link: 'project-board'
   },
   {
     id: 2,
     title: 'Program - Facility Relocation Study',
-    link: '../assets/content/adot/program-facility-relocation-study.png'
+    link: 'program-facility-relocation-study'
   },
   {
     id: 3,
     title: 'Program - Problem/Concept', 
-    link: '../assets/content/adot/program-problem-concept.png'
+    link: 'program-problem-concept'
   },
   {
     id: 4,
     title: 'Program - Requirements',
-    link:  '../assets/content/adot/program-requirements.png'
+    link:  'program-requirements'
   },
   {
     id: 5,
     title: 'Criteria Matrix',
-    link: '../assets/content/adot/criteria-matrix.png'
+    link: 'criteria-matrix'
   }, 
   {
     id: 6,
     title: 'Adjacency Matrix',
-    link: '../assets/content/adot/adjacency-matrix.png'
+    link: 'adjacency-matrix'
   },
   {
     id: 7,
     title: 'Moodboard',
-    link: '../assets/content/adot/moodboard.png'
+    link: 'moodboard'
   },
   {
     id: 8,
     title: 'Cover Page',
-    link: '../assets/content/adot/cover-page.png'
+    link: 'cover-page'
   },
   {
     id: 9,
     title: 'Site & Base Plan',
-    link:  '../assets/content/adot/site-base.png'
+    link:  'site-base'
   },
   {
     id: 10,
     title: 'Dimension & Furniture/ Finish Plan',
-    link: '../assets/content/adot/dimension-furniture-finish.png'
+    link: 'dimension-furniture-finish'
   },
   {
     id: 11,
     title: 'Power/ Lighting & Reflected Cealing Plan',
-    link: '../assets/content/adot/power-lighting-reflected-cealing.png'
+    link: 'power-lighting-reflected-cealing'
   },
   {
     id: 12,
     title: 'Perspective - ADOT Entry',
-    link: '../assets/content/adot/perspective-adot-entry.png'
+    link: 'perspective-adot-entry'
   },
   {
     id: 13,
     title: 'Perspective - MVD Entry',
-    link: '../assets/content/adot/perspective-mvd-entry.png'
+    link: 'perspective-mvd-entry'
   },
   {
     id: 14,
     title: 'Perspective - Reception',
-    link: '../assets/content/adot/perspective-reception.png',
+    link: 'perspective-reception',
 
   },
   {
     id: 15,
     title: 'Perspective - Waiting Area',
-    link: '../assets/content/adot/perspective-waiting.png'
+    link: 'perspective-waiting'
   },
   {
     id: 16,
     title: 'Perspective - Waiting Area from Reception',
-    link: '../assets/content/adot/perspective-waiting-reception.png'
+    link: 'perspective-waiting-reception'
   },
   {
     id: 17,
     title: 'Perspective - Service Counter',
-    link: '../assets/content/adot/perspective-serivce-counters.png'
+    link: 'perspective-serivce-counters'
   },
   {
     id: 18,
     title: 'Materials/ Finish Board',
-    link: '../assets/content/adot/materials-finish.png'
+    link: 'materials-finish'
   }
 ]
 
@@ -109,22 +107,22 @@ const ofs = [
   { 
     id: 1,
     title: 'Project Board', 
-    link: '../assets/content/ofs/project-board.png' 
+    link: 'project-board' 
   },
   { 
     id: 2,
     title: 'Dimension Plan', 
-    link: '../assets/content/ofs/dimension-plan.png'  
+    link: 'dimension-plan'  
   },
   { 
     id: 3,
     title: 'RCP', 
-    link: '../assets/content/ofs/rcp.png'
+    link: 'rcp'
   },
   { 
     id: 4,
     title: 'Finish Plan', 
-    link: '../assets/content/ofs/finish-plan.png'
+    link: 'finish-plan'
   }
 ]
 
@@ -132,62 +130,62 @@ const modern = [
   { 
     id: 1,
     title: 'Concept Statement & Moodboard',
-    link: '../assets/content/modern-loft/concept-statement-moodboard.png' 
+    link: 'concept-statement-moodboard' 
   },
   { 
     id: 2,
     title: 'Adjacency Matrix',
-    link: '../assets/content/modern-loft/adjacency-matrix.png' 
+    link: 'adjacency-matrix' 
   },
   { 
     id: 3,
     title: 'Bubble Diagrams',
-    link: '../assets/content/modern-loft/bubble-diagrams.png' 
+    link: 'bubble-diagrams' 
   },
   { 
     id: 4,
     title: 'Blocking Diagrams',
-    link: '../assets/content/modern-loft/blocking-diagram.png' 
+    link: 'blocking-diagram' 
   },
   { 
     id: 5,
     title: 'Conceptual Sketches',
-    link: '../assets/content/modern-loft/ceonceptual-sketches.png' 
+    link: 'ceonceptual-sketches' 
   },  
   { 
     id: 6,
     title: 'Floorplan',
-    link: '../assets/content/modern-loft/loft floorplan.png' 
+    link: 'loft floorplan' 
   },
   { 
     id: 7,
     title: 'Dining Room',
-    link: '../assets/content/modern-loft/dining-room-elevation.png' 
+    link: 'dining-room-elevation' 
   },
   { 
     id: 8,
     title: 'Master Bedroom',
-    link: '../assets/content/modern-loft/master-bedroom-elevation.png' 
+    link: 'master-bedroom-elevation' 
   },
   { 
     id: 9,
     title: 'Kitchen (1/2)',
-    link: '../assets/content/modern-loft/kitchen-elevation-1.png' 
+    link: 'kitchen-elevation-1' 
   },
   { 
     id: 10,
     title: 'Kitchen (2/2)',
-    link: '../assets/content/modern-loft/kitchen-elevation-2.png' 
+    link: 'kitchen-elevation-2' 
   },
   { 
     id: 11,
     title: 'Finish Board',
-    link: '../assets/content/modern-loft/finish-sample-board.png' 
+    link: 'finish-sample-board' 
   },
   { 
     id: 12,
     title: 'Budget',
-    link: '../assets/content/modern-loft/budget.png' 
+    link: 'budget' 
   }
 ]
 
@@ -199,72 +197,72 @@ const rest = [
   { 
     id: 1,
     title: 'Project Board',
-    link: '../assets/content/rest-concepts/project-board.png' 
+    link: 'project-board' 
   },
   { 
     id: 2,
     title: 'Criteria Matrix',
-    link: '../assets/content/rest-concepts/criteria-matrix.png' 
+    link: 'criteria-matrix' 
   },
   { 
     id: 3,
     title: 'Adjacency Diagram',
-    link: '../assets/content/rest-concepts/adjancency-diagram.png' 
+    link: 'adjancency-diagram' 
   },
   {
     id: 4,
     title: 'Bubble Diagrams',
-    link: '../assets/content/rest-concepts/bubble-diagrams.png' 
+    link: 'bubble-diagrams' 
   },
   { 
     id: 5,
     title: 'Amsterdam Moodboard',
-    link: '../assets/content/rest-concepts/Amsterdam Moodboard.png' 
+    link: 'amsterdam-moodboard' 
   },
   { 
     id: 6,
     title: 'Amsterdam Reception',
-    link: '../assets/content/rest-concepts/amsterdam-reception.png'
+    link: 'amsterdam-reception'
   },
   { 
     id: 7,
     title: 'Amsterdam Bar',
-    link: '../assets/content/rest-concepts/amsterdam-bar.png' 
+    link: 'amsterdam-bar' 
   },
   { 
     id: 8,
     title: 'Amsterdam Dining Area',
-    link: '../assets/content/rest-concepts/amsterdam-dining.png' 
+    link: 'amsterdam-dining' 
   },
   { 
     id: 9,
     title: 'Stockholm Moodboard',
-    link: '../assets/content/rest-concepts/stockholm-moodboard.png' 
+    link: 'stockholm-moodboard' 
   }, 
   { 
     id: 10,
     title: 'Stockholm Bar',
-    link: '../assets/content/rest-concepts/stockholm-bar.png' 
+    link: 'stockholm-bar' 
   },
   {
     id: 11,
     title: 'Stockholm Dining Area',
-    link: '../assets/content/rest-concepts/stockholm-dining.png' 
+    link: 'stockholm-dining' 
   },
   { 
     id: 12,
     title: 'Japan Moodboard',
-    link: '../assets/content/rest-concepts/japan moodboard.png' 
+    link: 'japan moodboard' 
   },
   { 
     id: 13,
     title: 'Japan Bar',
-    link: '../assets/content/rest-concepts/japan-bar.png' 
+    link: 'japan-bar' 
   },
   { 
     id: 14,
     title: 'Japan Dining Area',
-    link: '../assets/content/rest-concepts/japan-dining.png' 
+    link: 'japan-dining' 
   }
 ]
 
@@ -272,102 +270,102 @@ const helf = [
   { 
     id: 1,
     title: 'Cover Page' ,
-    link: '../assets/content/helf/cover-page.png' 
+    link: 'cover-page' 
   },
   { 
     id: 2,
     title: 'Spa Concept & Moodboard',
-    link: '../assets/content/helf/spa-concept-mood-board.png' 
+    link: 'spa-concept-mood-board' 
   },
   { 
     id: 3,
     title: 'Residence Concept & Moodboard',
-    link: '../assets/content/helf/residence-concept-mood-board.png' 
+    link: 'residence-concept-mood-board' 
   },
   { 
     id: 4,
     title: 'Dimension Plan', 
-    link: '../assets/content/helf/dimension-plan.png' 
+    link: 'dimension-plan' 
   },
   { 
     id: 5,
     title: 'Life Safety Plan',
-    link: '../assets/content/helf/life-safety-plan.png' 
+    link: 'life-safety-plan' 
   },
   { 
     id: 6,
     title: 'FF&E Schedule', 
-    link: '../assets/content/helf/ffe-schedule.png' 
+    link: 'ffe-schedule' 
   },
   { 
     id: 7,
     title: 'Technical Furniture Plan',
-    link: '../assets/content/helf/technical-furniture-plan.png' 
+    link: 'technical-furniture-plan' 
   },
   { 
     id: 8,
     title: 'Rendered Furniture Plan',
-    link: '../assets/content/helf/rendered-furniture-plan.png' 
+    link: 'rendered-furniture-plan' 
   },
   { 
     id: 9,
     title: 'Spa Technical Elevations',
-    link: '../assets/content/helf/spa-tech-elevs.png' 
+    link: 'spa-tech-elevs' 
   },
   { 
     id: 10,
     title: 'Spa Rendered Elevations',
-    link: '../assets/content/helf/spa-rendered-elevs.png' 
+    link: 'spa-rendered-elevs' 
   },
   { 
     id: 11,
     title: 'Residence Technical Elevations',
-    link: '../assets/content/helf/res-technical-elevs.png' 
+    link: 'res-technical-elevs' 
   },
   { 
     id: 12,
     title: 'Residence Rendered Elevations',
-    link: '../assets/content/helf/res-rendered-elevs.png' 
+    link: 'res-rendered-elevs' 
   },
   { 
     id: 13,
     title: 'Spa Materials Board', 
-    link: '../assets/content/helf/spa-materials.png' 
+    link: 'spa-materials' 
   },
   { 
     id: 14,
     title: 'Residence Materials Board',
-    link: '../assets/content/helf/residence-materials.png' 
+    link: 'residence-materials' 
   },
   { 
     id: 15,
     title: '', 
-    link: '../assets/content/helf/a.png' 
+    link: 'a' 
   },
   { 
     id: 16,
     title: '', 
-    link: '../assets/content/helf/b.png' 
+    link: 'b' 
   },
   { 
     id: 17,
     title: '', 
-    link: '../assets/content/helf/c.png' 
+    link: 'c' 
   },
   { 
     id: 18,
     title: '', 
-    link: '../assets/content/helf/d.png' 
+    link: 'd' 
   },
   { 
     id: 19,
     title: '', 
-    link: '../assets/content/helf/e.png' 
+    link: 'e' 
   },
   { 
     id: 20,
     title: '', 
-    link: '../assets/content/helf/f.png' 
+    link: 'f' 
   }
 ]
 
@@ -375,52 +373,52 @@ const conceptuals = [
   { 
     id: 1,
     title: '',
-    link: '../assets/content/conceptuals-renderings/gensler.png' 
+    link: 'gensler' 
   },
   { 
     id: 2,
     title: '',
-    link: '../assets/content/conceptuals-renderings/photoshop.png' 
+    link: 'photoshop' 
   },
   { 
     id: 3,
     title: '',
-    link: '../assets/content/conceptuals-renderings/untitled.png' 
+    link: 'untitled' 
   }, 
   { 
     id: 4,
     title: '',
-    link: '../assets/content/conceptuals-renderings/a.png' 
+    link: 'a' 
   },
   { 
     id: 5,
     title: '',
-    link: '../assets/content/conceptuals-renderings/b.png' 
+    link: 'b' 
   },
   { 
     id: 6,
     title: '',
-    link: '../assets/content/conceptuals-renderings/c.png' 
+    link: 'c' 
   },
   { 
     id: 7,
     title: '',
-    link: '../assets/content/conceptuals-renderings/d.png' 
+    link: 'd' 
   },
   { 
     id: 8,
     title: '',
-    link: '../assets/content/conceptuals-renderings/e.png' 
+    link: 'e' 
   },
   { 
     id: 9,
     title: '',
-    link: '../assets/content/conceptuals-renderings/f.png' 
+    link: 'f' 
   },
   { 
     id: 10,
     title: '',
-    link: '../assets/content/conceptuals-renderings/g.png'
+    link: 'g'
   }
 ]
 
@@ -428,32 +426,32 @@ const sunburst = [
   { 
     id: 1,
     title: 'Dimension Plan',
-    link: '../assets/content/sunburst-condos/dimension-plan.png' 
+    link: 'dimension-plan' 
   },
   { 
     id: 2,
     title: 'Space Plan',
-    link: '../assets/content/sunburst-condos/space-plan.png' 
+    link: 'space-plan' 
   },
   { 
     id: 3,
     title: 'Reflected Ceiling Plan',
-    link: '../assets/content/sunburst-condos/reflected-cealing-plan.png' 
+    link: 'reflected-cealing-plan' 
   },
   { 
     id: 4,
     title: 'Power & Lighting Plan',
-    link: '../assets/content/sunburst-condos/power-lighting.png' 
+    link: 'power-lighting' 
   },
   { 
     id: 5,
     title: 'Vanity Specs',
-    link: '../assets/content/sunburst-condos/vanity.png' 
+    link: 'vanity' 
   },
   { 
     id: 6,
     title: 'Lamp Specs',
-    link: '../assets/content/sunburst-condos/lamp.png' 
+    link: 'lamp' 
   }
 ]
 
@@ -461,47 +459,19 @@ const moodboards = [
   { 
     id: 1,
     title: '', 
-    link: '../assets/content/moodboards/a.png' 
+    link: 'a' 
   },
   { 
     id: 2,
     title: '', 
-    link: '../assets/content/moodboards/b.png' 
+    link: 'b' 
   },
   { 
     id: 3,
     title: '', 
-    link: '../assets/content/moodboards/c.png' 
+    link: 'c' 
   }
 ]
-
-function ModalContent(props) {
-  return (
-    <Modal
-      {...props}
-      size="xl"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Body>
-        <Row>
-          <Col id='modal-btn-col' xs={1}>
-            <Button id='modal-btn' text='<' />
-          </Col>
-          <Col xs={10}>
-          
-              <img className='modal-photo' src={props.src.link ? props.src.link : ''} alt={props.src.title ? props.src.title : ''}></img>
-            
-          </Col>
-
-          <Col id='modal-btn-col' xs={1}>
-            <Button id='modal-btn' text='>' />
-          </Col>
-        </Row>
-      </Modal.Body>
-    </Modal>
-  )
-}
 
 export default class PortfolioDetail extends Component {
  
@@ -604,7 +574,8 @@ export default class PortfolioDetail extends Component {
               <Button id='modal-btn' text='<' onClick={(e) => this.updateModal('left', e)} />
             </Col>
             <Col id='modal-img-col' xs={10}>
-              <img className='modal-photo' src={this.state.activePhoto.link ? this.state.activePhoto.link : ''} alt={this.state.activePhoto.title ? this.state.activePhoto.title : ''}></img>
+              <Image className='modal-photo' cloudName='dbwppel0z' publicId={`mc-portfolio/${this.state.id}/${this.state.activePhoto.link}`}>
+              </Image>
             </Col>
             <Col id='modal-btn-col' xs={1}>
               <Button id='modal-btn' text='>' onClick={(e) => this.updateModal('right', e)}/>
@@ -616,6 +587,7 @@ export default class PortfolioDetail extends Component {
   }
 
   openModal = (e) => {
+    console.log(e)
     this.setState({
       modalShow: true,
       activePhoto: e
@@ -655,14 +627,17 @@ export default class PortfolioDetail extends Component {
           </Col>
         </Row>
 
-        <Row id='project-content-row'>
+        <Row xs={1} s={1} m={2}  id='project-content-row'>
           {this.state.content.map(src => 
-           <ProjectCard 
-            id={src.id} key={src.id} src={src.link} title={src.title} onClick={(e) => this.openModal(src, e)} 
+            <ProjectCard 
+              id={src.id} 
+              key={src.id} 
+              title={src.title} 
+              src={`mc-portfolio/${this.state.id}/${src.link}`} 
+              onClick={(e) => this.openModal(src, e)} 
             />
           )}
-        
-          {this.loadModalContent()}
+          {this.loadModalContent()}   
         </Row>
       </Section>
     )
