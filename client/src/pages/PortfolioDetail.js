@@ -624,7 +624,7 @@ export default class PortfolioDetail extends Component {
       <Section id={this.state.id}>
         <Row>
           <Col>
-            <SectionHeader>{this.state.title}</SectionHeader>
+            <SectionHeader id='portfolio-detail-header'>{this.state.title}</SectionHeader>
           </Col>
         </Row>
 

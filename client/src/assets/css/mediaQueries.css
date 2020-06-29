@@ -29,11 +29,15 @@
   .date {
     float: left;
   }
+   /* ~ PORTFOLIO DETAIL ~ */
+  .text-white.project-card.card {
+    max-width: 45%;
+  }
 } 
 @media screen and (max-width: 767px) {
   /* ~ GENERAL ~ */
   .section-header {
-    margin: 2rem 0 0 1rem;
+    margin: 2rem 0 2rem 1rem;
   }
   /* ~ HOME ~ */ 
   #home-col {
@@ -59,6 +63,10 @@
   }
   #my-skills, #my-experience {
     margin: 1rem;
+  }
+   /* ~ PORTFOLIO DETAIL ~ */
+  .text-white.project-card.card {
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 700px) {
