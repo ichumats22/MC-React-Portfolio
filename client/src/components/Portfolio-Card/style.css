@@ -10,6 +10,10 @@ div.card-img-overlay {
   justify-content: flex-end;
 }
 
+.text-white.card img {
+  max-height: 400px;
+}
+
 img.card-img {
   border-radius: initial;
 }
