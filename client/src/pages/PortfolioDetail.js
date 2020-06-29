@@ -510,7 +510,7 @@ export default class PortfolioDetail extends Component {
           content: ofs 
         })
         break;
-      case 'modern':
+      case 'modern-loft':
         this.setState({ 
           title: 'Modern Loft',
           content: modern 
@@ -522,7 +522,7 @@ export default class PortfolioDetail extends Component {
           content: tech
         })
         break;
-      case 'rest':
+      case 'rest-concepts':
         this.setState({ 
           title: 'Restaurant Concepts',
           content: rest 
@@ -534,13 +534,13 @@ export default class PortfolioDetail extends Component {
           content: helf
         })
         break;
-      case 'conceptuals':
+      case 'conceptuals-renderings':
         this.setState({ 
           title: 'Conceptuals/Renderings',
           content: conceptuals 
         })
         break;
-      case 'sunburst':
+      case 'sunburst-condos':
         this.setState({ 
           title: 'Sunburst Condominiums',
           content: sunburst 
