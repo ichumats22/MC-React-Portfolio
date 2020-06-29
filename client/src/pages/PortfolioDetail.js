@@ -5,9 +5,10 @@ import Section from '../components/Section'
 import SectionHeader from '../components/Section-Header'
 import ProjectCard from '../components/Project-Card'
 import Button from '../components/Button'
-
-
 import './PortfolioDetail.css'
+
+require('dotenv').config()
+let cloudName = process.env.REACT_APP_CLOUD_NAME
 
 const adot = [
   {
@@ -574,7 +575,7 @@ export default class PortfolioDetail extends Component {
               <Button id='modal-btn' text='<' onClick={(e) => this.updateModal('left', e)} />
             </Col>
             <Col id='modal-img-col' xs={10}>
-              <Image className='modal-photo' cloudName='dbwppel0z' publicId={`mc-portfolio/${this.state.id}/${this.state.activePhoto.link}`}>
+              <Image className='modal-photo' cloudName={cloudName} publicId={`mc-portfolio/${this.state.id}/${this.state.activePhoto.link}`}>
               </Image>
             </Col>
             <Col id='modal-btn-col' xs={1}>
