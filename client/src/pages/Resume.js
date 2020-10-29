@@ -44,6 +44,9 @@ class Resume extends Component {
                 <Res.RightSubCol size='md-6'>
                   <Res.Block>
                     <li>
+                      Microsoft Office (Word, Excel, Powerpoint)
+                    </li>
+                    <li>
                       Creative problem-solving
                     </li>
                     <li>
@@ -51,9 +54,6 @@ class Resume extends Component {
                     </li>
                     <li>
                       Time management
-                    </li>
-                    <li>
-                      Microsoft Office (Word, Excel, Powerpoint)
                     </li>
                   </Res.Block>
                 </Res.RightSubCol>
