@@ -69,7 +69,7 @@ export default class Home extends Component {
               <SkillBlock 
                 aos='fade-up'
                 title='AutoCad' 
-                text='Highly proficient in AutoDesk AutoCad with 4 years of experience.' 
+                text='Highly proficient in AutoDesk AutoCad with 4 years of experience' 
               />
             </Col>
             <Col md={3}>
