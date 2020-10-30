@@ -1,16 +1,32 @@
 /* ~ HOME ~ */
   #home {
-    background: url(../assets/images/home-wave.svg);
+    /*background: url(../assets/images/home-wave.svg);
     background-position: 65rem -7rem;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-size: inherit;
+    background-size: inherit; */
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+  #home .row {
+    flex-wrap: nowrap;
+  }
   #home-text-col {
     margin-left: 3rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    z-index: 10;
+  }
+  #home-svg-col {
+    height: 100vh;
+  }
+  #home-svg {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
 /* ~ ABOUT ~ */ 
@@ -45,6 +61,19 @@
   #see-my-work-btn {
     display: flex;
     align-self: flex-start;
+  }
+
+  .cls-1 {
+    fill: #bf3c1f;
+  }
+
+  .cls-1, .cls-2 {
+    stroke: #bf3c1f;
+    stroke-miterlimit: 10;
+  }
+
+  .cls-2 {
+    fill: none;
   }
 
 /* ~ SKILLS ~ */

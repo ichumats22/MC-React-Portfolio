@@ -25,7 +25,7 @@ export default class PortfolioCard extends Component {
     return(
       <NavLink to={`/portfolio/${this.state.id}`}>
         <Card className='text-white'>
-          <Image cloudName={cloudName} publicId={`mc-portfolio/covers/${this.state.id}.png`} secure={true} responsive={true}>
+          <Image cloudName={cloudName} publicId={`mc-portfolio/covers/${this.state.id}`} secure={true} responsive={true}>
             <Transformation width='775' height='466' crop='mfit' />  
           </Image>
           <Card.ImgOverlay>  

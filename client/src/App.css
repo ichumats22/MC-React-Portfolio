@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #fff7e0;
+}
+
 div.container-fluid {
   background-color: #fff7e0;
   min-height: 100vh;

@@ -5,9 +5,10 @@ import Section from '../components/Section'
 import SectionHeader from '../components/Section-Header'
 import ProjectCard from '../components/Project-Card'
 import Button from '../components/Button'
-
-
 import './PortfolioDetail.css'
+
+require('dotenv').config()
+let cloudName = process.env.REACT_APP_CLOUD_NAME
 
 const adot = [
   {
@@ -509,7 +510,7 @@ export default class PortfolioDetail extends Component {
           content: ofs 
         })
         break;
-      case 'modern':
+      case 'modern-loft':
         this.setState({ 
           title: 'Modern Loft',
           content: modern 
@@ -521,7 +522,7 @@ export default class PortfolioDetail extends Component {
           content: tech
         })
         break;
-      case 'rest':
+      case 'rest-concepts':
         this.setState({ 
           title: 'Restaurant Concepts',
           content: rest 
@@ -533,13 +534,13 @@ export default class PortfolioDetail extends Component {
           content: helf
         })
         break;
-      case 'conceptuals':
+      case 'conceptuals-renderings':
         this.setState({ 
           title: 'Conceptuals/Renderings',
           content: conceptuals 
         })
         break;
-      case 'sunburst':
+      case 'sunburst-condos':
         this.setState({ 
           title: 'Sunburst Condominiums',
           content: sunburst 
@@ -574,7 +575,7 @@ export default class PortfolioDetail extends Component {
               <Button id='modal-btn' text='<' onClick={(e) => this.updateModal('left', e)} />
             </Col>
             <Col id='modal-img-col' xs={10}>
-              <Image className='modal-photo' cloudName='dbwppel0z' publicId={`mc-portfolio/${this.state.id}/${this.state.activePhoto.link}`}>
+              <Image className='modal-photo' cloudName={cloudName} publicId={`mc-portfolio/${this.state.id}/${this.state.activePhoto.link}`}>
               </Image>
             </Col>
             <Col id='modal-btn-col' xs={1}>
@@ -623,7 +624,7 @@ export default class PortfolioDetail extends Component {
       <Section id={this.state.id}>
         <Row>
           <Col>
-            <SectionHeader>{this.state.title}</SectionHeader>
+            <SectionHeader id='portfolio-detail-header'>{this.state.title}</SectionHeader>
           </Col>
         </Row>
 
