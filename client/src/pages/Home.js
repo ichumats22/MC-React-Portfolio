@@ -62,7 +62,7 @@ export default class Home extends Component {
               <SkillBlock 
                 aos='fade-left' 
                 title='Project Management' 
-                text=' ' 
+                text='Highly proficient at managing resources to ensure project success' 
               />
             </Col>
             <Col md={3}>
