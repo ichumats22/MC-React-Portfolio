@@ -46,6 +46,16 @@ export function RightSubCol({size, children}) {
   )
 }
 
+export function LeftSubCol({size, children}) {
+  let colSize = size.split(' ').map(size => 'col-' + size).join(' ')
+  
+  return(
+    <div className={`${colSize} resume-subcol`} id='resume-left-col'>
+      {children}
+    </div>
+  )
+}
+
 export function Block({children, id}) {
   return (
     <div className='resume-block' id={id}>

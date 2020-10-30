@@ -134,6 +134,78 @@ class Resume extends Component {
               </Row>
 
               <Res.SubRow>
+                <Res.LeftSubCol size='md-6'>
+                  <Res.Block id='lindsay-kadlick-block'>
+                    <Row>
+                      <Res.SubCol size='12'>
+                        <h4>
+                          Lindsay Kadlick Interiors | Scottsdale, AZ
+                        </h4>
+                      </Res.SubCol>
+                    </Row>
+                    <Row>
+                      <Res.SubCol size='lg-6'>
+                        <h5>
+                          Interior Designer
+                        </h5>
+                      </Res.SubCol>
+                      <Res.SubCol size='lg-6'>
+                        <h6 className='date'>
+                          Jun 2020 – Present
+                        </h6>
+                      </Res.SubCol>
+                    </Row>
+                    <Row>
+                      <Res.SubCol size='12'>
+                        <li>
+                          Design furniture and finish scheme presentations for clients
+                        </li>
+                        <li>
+                        	Draft furniture plans, finish plans and detailed tile elevations in AutoCad
+                        </li>
+                        <li>
+                          Manage resources and vendors to meet tight deadlines
+                        </li>
+                      </Res.SubCol>
+                    </Row>
+                  </Res.Block>
+
+                  <Res.Block id='flooring-specialist-block'>
+                    <Row>
+                      <Res.SubCol size='12'>
+                        <h4>
+                          The Home Depot | Flagstaff, AZ
+                        </h4>
+                      </Res.SubCol>
+                    </Row>
+                    <Row>
+                      <Res.SubCol size='lg-6'>
+                        <h5>
+                          Flooring Specialist
+                        </h5>
+                      </Res.SubCol>
+                      <Res.SubCol size='lg-6'>
+                        <h6 className='date'>
+                          Feb 2018 – Jun 2018
+                        </h6>
+                      </Res.SubCol>
+                    </Row>
+                    <Row >
+                      <Res.SubCol size='12'>
+                        <li>
+                          Drive sales by meeting weekly sales goals in a fast pace environment
+                        </li>
+                        <li>
+                          Extensive product knowledge to assist c ustomers with selections
+                        </li>
+                        <li>
+                          Process customer orders including credit card transactions and set up appointments
+                        </li>
+                      </Res.SubCol>
+                    </Row>
+                  </Res.Block>
+                </Res.LeftSubCol>
+
                 <Res.SubCol size='md-6'>
                   <Res.Block id='ashley-p-block'>
                     <Row>
@@ -222,73 +294,6 @@ class Resume extends Component {
                     </Row>
                   </Res.Block>
                 </Res.SubCol>
-
-                <Res.RightSubCol size='md-6'>
-                  <Res.Block id='flooring-specialist-block'>
-                    <Row>
-                      <Res.SubCol size='12'>
-                        <h4>
-                          The Home Depot | Flagstaff, AZ
-                        </h4>
-                      </Res.SubCol>
-                    </Row>
-                    <Row>
-                      <Res.SubCol size='lg-6'>
-                        <h5>
-                          Flooring Specialist
-                        </h5>
-                      </Res.SubCol>
-                      <Res.SubCol size='lg-6'>
-                        <h6 className='date'>
-                          Feb 2018 – Jun 2018
-                        </h6>
-                      </Res.SubCol>
-                    </Row>
-                    <Row >
-                      <Res.SubCol size='12'>
-                        <li>
-                          Drive sales by meeting weekly sales goals in a fast pace environment
-                        </li>
-                        <li>
-                          Extensive product knowledge to assist c ustomers with selections
-                        </li>
-                        <li>
-                          Process customer orders including credit card transactions and set up appointments
-                        </li>
-                      </Res.SubCol>
-                    </Row>
-                  </Res.Block>
-
-                  <Res.Block id='file-admin-block'>
-                    <Row>
-                      <Res.SubCol size='12'>
-                        <h4>
-                          Aiken Schenk Hawkins & Ricciardi P.C. | Phoenix, AZ
-                        </h4>
-                      </Res.SubCol>
-                    </Row>
-                    <Row>
-                      <Res.SubCol size='lg-6'>
-                        <h5>
-                          File Administrator
-                        </h5>
-                      </Res.SubCol>
-                      <Res.SubCol size='lg-6'>
-                        <h6 className='date'>
-                          Dec 2014 – Jan 2015
-                        </h6>
-                      </Res.SubCol>
-                    </Row>
-                    <Row>
-                      <Res.SubCol size='12'>
-                        <li>
-                          Assisted on project at law firm to identify and reconcile variances between physical
-                          and electronic files per assigned time deadlines
-                        </li>
-                      </Res.SubCol>
-                    </Row>
-                  </Res.Block>
-                </Res.RightSubCol>
               </Res.SubRow>
             </Col>
           </Res.Row>
